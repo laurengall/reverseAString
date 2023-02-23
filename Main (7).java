@@ -4,7 +4,6 @@ class Main {
   public static void main(String[] args) {
     boolean stop = false;
     Scanner input = new Scanner(System.in);
-
     while (stop == false) {
       System.out.println("Enter a word:");
       String str = input.nextLine();
@@ -30,11 +29,9 @@ class Main {
         break;
       }
     }
-
   }
 
   public static void reverse(String str) {
-
     String newStr = "";
     for (int x = str.length() - 1; x > -1; x--) {
       newStr += str.charAt(x);
@@ -43,7 +40,6 @@ class Main {
   }
 
   public static void noSpace(String str) {
-
     String aStr = "";
     for (int x = 0; x < str.length(); x++) {
       aStr = str.replaceAll("\\s+", "");
