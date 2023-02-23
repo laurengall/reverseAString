@@ -4,14 +4,11 @@ class Main {
   public static void main(String[] args) {
     boolean stop = false;
     Scanner input = new Scanner(System.in);
+
     while (stop == false) {
       System.out.println("Enter a word:");
       String str = input.nextLine();
-      System.out.println("Type the number of the operation you would like to perform.");
-      System.out.println("1. Reverse a string.");
-      System.out.println("2. Remove all spaces.");
-      System.out.println("3. Print in all uppercase letters.");
-      System.out.println("4. Print in all lowercase letters.");
+      print();
       int num = input.nextInt();
       if (num == 1) {
         reverse(str);
@@ -24,10 +21,9 @@ class Main {
       }
       System.out.println("Would you like to do another manipulation? Type 1 for yes and 2 for no.");
       int x = input.nextInt();
-      if (x == 1) {
-        stop = false;
-      } else if (x == 2) {
+      if (x == 2) {
         stop = true;
+        break;
       }
     }
 
@@ -57,5 +53,13 @@ class Main {
 
   public static void lowerCase(String str) {
     System.out.println(str.toLowerCase());
+  }
+
+  public static void print() {
+    System.out.println("Type the number of the operation you would like to perform.");
+    System.out.println("1. Reverse a string.");
+    System.out.println("2. Remove all spaces.");
+    System.out.println("3. Print in all uppercase letters.");
+    System.out.println("4. Print in all lowercase letters.");
   }
 }
