@@ -5,16 +5,21 @@ class Main {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter a word:");
     String str = input.nextLine();
-    System.out.println("What operation would you like to perform?\n1. Reverse a String\n2. Remove spaces");
+    System.out.println("Type the number of the operation you would like to perform.");
+    System.out.println("1. Reverse a string.");
+    System.out.println("2. Remove all spaces.");
+    System.out.println("3. Print in all uppercase letters.");
+    System.out.println("4. Print in all lowercase letters.");
     int num = input.nextInt();
 
     if (num == 1) {
       reverse(str);
     } else if (num == 2) {
-
       noSpace(str);
-    } else {
-
+    } else if (num == 3) {
+      upperCase(str);
+    } else if (num == 4) {
+      lowerCase(str);
     }
 
   }
@@ -35,5 +40,13 @@ class Main {
       aStr = str.replaceAll("\\s+", "");
     }
     System.out.println(str + " without the white space is " + aStr);
+  }
+
+  public static void upperCase(String str) {
+    System.out.println(str.toUpperCase());
+  }
+
+  public static void lowerCase(String str) {
+    System.out.println(str.toLowerCase());
   }
 }
