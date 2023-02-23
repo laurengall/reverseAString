@@ -21,7 +21,11 @@ class Main {
       }
       System.out.println("Would you like to do another manipulation? Type 1 for yes and 2 for no.");
       int x = input.nextInt();
-      if (x == 2) {
+      if (x == 1) {
+        System.out.println("Enter a word:");
+        str = input.nextLine();
+        print();
+      } else if (x == 2) {
         stop = true;
         break;
       }
