@@ -1,4 +1,4 @@
-# stringManipulator Version 1.5
+# stringManipulator Version 2.1
 ### Expected change for next update: 
-Functionality to continue the program 
-Fcuntionality to perform mulitple operations on the same string
+
+Functionality to perform mulitple operations on the same string
