@@ -17,6 +17,8 @@ class Main {
         upperCase(str);
       } else if (num == 4) {
         lowerCase(str);
+      } else if (num == 5) {
+        concat(str);
       }
       System.out.println("Would you like to do another manipulation? Type 1 for yes and 2 for no.");
       int x = input.nextInt();
@@ -55,11 +57,20 @@ class Main {
     System.out.println(str.toLowerCase());
   }
 
+  public static void concat(String str) {
+    Scanner input2 = new Scanner(System.in);
+    System.out.println("Type in the string you would like to concatenate with the first string.");
+    String add = input2.nextLine();
+    String newStr = str + add;
+    System.out.println(str + " concatenated with " + add + " is " + newStr);
+  }
+
   public static void print() {
     System.out.println("Type the number of the operation you would like to perform.");
     System.out.println("1. Reverse a string.");
     System.out.println("2. Remove all spaces.");
     System.out.println("3. Print in all uppercase letters.");
     System.out.println("4. Print in all lowercase letters.");
+    System.out.println("5. Concatenate two strings");
   }
 }
