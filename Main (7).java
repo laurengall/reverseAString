@@ -71,6 +71,6 @@ class Main {
     System.out.println("2. Remove all spaces.");
     System.out.println("3. Print in all uppercase letters.");
     System.out.println("4. Print in all lowercase letters.");
-    System.out.println("5. Concatenate two strings");
+    System.out.println("5. Concatenate two strings.");
   }
 }
