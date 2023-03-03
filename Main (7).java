@@ -7,6 +7,7 @@ class Main {
     while (stop == false) {
       System.out.println("Enter a word:");
       String str = input.nextLine();
+      String backup = str;
       print();
       int num = input.nextInt();
       if (num == 1) {
@@ -25,9 +26,16 @@ class Main {
       System.out.println("Would you like to do another manipulation? Type 1 for yes and 2 for no.");
       int x = input.nextInt();
       if (x == 1) {
-        System.out.println("Enter a word:");
-        str = input.nextLine();
-        print();
+        System.out.println("Type 1 to reuse your last string, type 2 to use a new string.");
+        int whichOne = input.nextInt();
+        if (whichOne == 1) {
+          sameStr(backup, str);
+        } else if (whichOne == 2) {
+          System.out.println("Enter a word:");
+          str = input.nextLine();
+          print();
+        }
+
       } else if (x == 2) {
         stop = true;
         break;
@@ -75,6 +83,11 @@ class Main {
     } else {
       System.out.println("No, this string is not a palindrome.");
     }
+  }
+
+  public static void sameStr(String backup, String str) {
+    str = backup;
+    print();
   }
 
   public static void print() {
