@@ -51,6 +51,14 @@ class Main {
     System.out.println(str + " in reverse is " + newStr);
   }
 
+  public static String rev(String str) {
+    String newStr = "";
+    for (int x = str.length() - 1; x > -1; x--) {
+      newStr += str.charAt(x);
+    }
+    return newStr;
+  }
+
   public static void noSpace(String str) {
     String aStr = "";
     for (int x = 0; x < str.length(); x++) {
@@ -76,8 +84,8 @@ class Main {
   }
 
   public static void palindrome(String str) {
-    String check = str;
-    reverse(check);
+    String check = rev(str);
+
     if (str.equals(check)) {
       System.out.println("Yes, this string is palindrome.");
     } else {
