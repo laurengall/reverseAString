@@ -38,6 +38,7 @@ class Main {
 
       } else if (x == 2) {
         stop = true;
+        System.out.println("Thanks for visiting!");
         break;
       }
     }
