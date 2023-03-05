@@ -6,8 +6,10 @@ class Main {
     Scanner input = new Scanner(System.in);
     while (stop == false) {
       System.out.println("Enter a word:");
-      String str = input.nextLine();
-      String backup = str;
+      String str = "";
+      str = input.nextLine();
+      String backup = "";
+      backup = str;
       print();
       int num = input.nextInt();
       if (num == 1) {
@@ -95,7 +97,6 @@ class Main {
   }
 
   public static void sameStr(String backup, String str) {
-    str = backup;
     print();
   }
 
